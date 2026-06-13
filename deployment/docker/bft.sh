@@ -2,17 +2,19 @@
 
 generate_bft_cluster() {
 
-    source core/logger.sh
+read -p "Number of BFT Nodes: " NODES
 
-    echo "BFT Nodes:"
-    read NODES
+BFT_DIR="generated/networks/bft"
 
-    mkdir -p generated-network/bft
+mkdir -p "$BFT_DIR"
 
-    for ((i=1;i<=NODES;i++))
-    do
-        touch generated-network/bft/node${i}.yaml
-    done
+cat > "$BFT_DIR/bft.txt" <<EOF
+BFT NODES
 
-    log_success "BFT Configuration Generated"
+Count: $NODES
+EOF
+
+echo
+echo "BFT Configuration Generated"
+
 }

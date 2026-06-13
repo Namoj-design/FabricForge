@@ -2,17 +2,19 @@
 
 generate_raft_cluster() {
 
-    source core/logger.sh
+read -p "Number of Orderers: " ORDERERS
 
-    echo "Number of Orderers:"
-    read ORDERERS
+RAFT_DIR="generated/networks/raft"
 
-    mkdir -p generated-network/orderers
+mkdir -p "$RAFT_DIR"
 
-    for ((i=1;i<=ORDERERS;i++))
-    do
-        touch generated-network/orderers/orderer${i}.yaml
-    done
+cat > "$RAFT_DIR/orderers.txt" <<EOF
+RAFT ORDERERS
 
-    log_success "RAFT Cluster Generated"
+Count: $ORDERERS
+EOF
+
+echo
+echo "RAFT Cluster Generated"
+
 }

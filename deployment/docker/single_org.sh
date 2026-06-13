@@ -2,22 +2,15 @@
 
 create_single_org_network() {
 
-    source core/logger.sh
+NETWORK_DIR="generated/networks/single-org"
 
-    FABRIC_HOME="$HOME/hyperledger/fabric-samples/test-network"
+mkdir -p "$NETWORK_DIR"
 
-    if [ ! -d "$FABRIC_HOME" ]; then
+cp templates/networks/single_org/* \
+"$NETWORK_DIR/"
 
-        log_error "Fabric samples not found"
+echo
+echo "Single Organization Network Generated"
+echo "$NETWORK_DIR"
 
-        return 1
-    fi
-
-    cd "$FABRIC_HOME"
-
-    ./network.sh down
-
-    ./network.sh up createChannel
-
-    log_success "Single Org Network Created"
 }

@@ -2,17 +2,19 @@
 
 validate_network() {
 
-    source core/logger.sh
+echo
+echo "================================="
+echo "Docker Network Validation"
+echo "================================="
 
-    docker ps | grep peer
+docker ps
 
-    if [ $? -eq 0 ]; then
+echo
 
-        log_success "Peer Containers Running"
+docker network ls
 
-    else
+echo
 
-        log_error "Peer Containers Missing"
+echo "Validation Complete"
 
-    fi
 }

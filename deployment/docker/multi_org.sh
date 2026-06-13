@@ -2,20 +2,18 @@
 
 create_multi_org_network() {
 
-    source core/logger.sh
+read -p "Number of Organizations: " ORGS
 
-    echo "Organizations:"
-    read ORGS
+NETWORK_DIR="generated/networks/multi-org"
 
-    echo "Peers per organization:"
-    read PEERS
+mkdir -p "$NETWORK_DIR"
 
-    mkdir -p generated-network
+cp templates/networks/two_org/* \
+"$NETWORK_DIR/"
 
-    cat > generated-network/network-config.yaml <<EOF
-organizations: $ORGS
-peers_per_org: $PEERS
-EOF
+echo
+echo "Organizations: $ORGS"
 
-    log_success "Multi Org Configuration Generated"
+echo "Network Generated"
+
 }

@@ -2,14 +2,15 @@
 
 enable_couchdb() {
 
-    source core/logger.sh
+DB_DIR="generated/networks/database"
 
-    mkdir -p generated-network/database
+mkdir -p "$DB_DIR"
 
-    cat > generated-network/database/couchdb.yaml <<EOF
-database: couchdb
-port: 5984
-EOF
+cp \
+templates/networks/production/couchdb.yaml \
+"$DB_DIR/"
 
-    log_success "CouchDB Configuration Generated"
+echo
+echo "CouchDB Enabled"
+
 }
