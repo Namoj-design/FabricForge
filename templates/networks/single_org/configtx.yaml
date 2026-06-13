@@ -1,0 +1,9 @@
+Organizations:
+
+  - &Org1
+
+    Name: Org1MSP
+
+    ID: Org1MSP
+
+    MSPDir: crypto-config/peerOrganizations/org1.example.com/msp

@@ -1,0 +1,9 @@
+Organizations:
+
+  - &Org1
+
+    Name: Org1MSP
+
+  - &Org2
+
+    Name: Org2MSP

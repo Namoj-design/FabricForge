@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+
+  orderer.example.com:
+
+    image: hyperledger/fabric-orderer
+
+  peer0.org1.example.com:
+
+    image: hyperledger/fabric-peer
