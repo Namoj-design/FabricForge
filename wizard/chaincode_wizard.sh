@@ -1,52 +1,32 @@
 #!/bin/bash
 
-generate_chaincode() {
+chaincode_wizard() {
 
-echo "Select Chaincode Language"
-
-echo "1) Go"
-echo "2) Node.js"
-echo "3) Java"
-echo "4) TypeScript"
-
-read LANG
+echo
+echo "================================="
+echo "Chaincode Wizard"
+echo "================================="
+echo
 
 echo "Chaincode Name:"
-read CC_NAME
+read CHAINCODE_NAME
 
-mkdir -p projects/$CC_NAME
+echo
 
-case $LANG in
+echo "Language"
 
-1)
+echo "1) Go"
 
-cp -r templates/chaincode/go/* \
-projects/$CC_NAME/
+echo "2) Node.js"
 
-;;
+echo "3) Java"
 
-2)
+echo "4) TypeScript"
 
-cp -r templates/chaincode/node/* \
-projects/$CC_NAME/
+read LANGUAGE
 
-;;
+echo
 
-3)
+echo "Generating Chaincode Template..."
 
-cp -r templates/chaincode/java/* \
-projects/$CC_NAME/
-
-;;
-
-4)
-
-cp -r templates/chaincode/typescript/* \
-projects/$CC_NAME/
-
-;;
-
-esac
-
-echo "Chaincode generated"
 }
