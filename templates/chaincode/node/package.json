@@ -1,0 +1,8 @@
+{
+    "name": "fabricforge-chaincode",
+    "version": "1.0.0",
+    "main": "assetTransfer.js",
+    "dependencies": {
+        "fabric-contract-api": "^2.5.0"
+    }
+}
