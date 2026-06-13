@@ -18,5 +18,7 @@ func main() {
         panic(err)
     }
 
-    cc.Start()
+    if err := cc.Start(); err != nil {
+        panic(err)
+    }
 }
