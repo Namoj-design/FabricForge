@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: fabric-explorer
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: fabric-explorer
+
+  template:
+
+    metadata:
+      labels:
+        app: fabric-explorer
+
+    spec:
+
+      containers:
+
+      - name: explorer
+
+        image: hyperledger/explorer:latest
+
+        ports:
+
+        - containerPort: 8080
