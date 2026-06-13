@@ -1,0 +1,10 @@
+PeerOrgs:
+
+  - Name: Org1
+    Domain: org1.example.com
+
+  - Name: Org2
+    Domain: org2.example.com
+
+  - Name: Org3
+    Domain: org3.example.com
