@@ -1,0 +1,11 @@
+OrdererOrgs:
+
+  - Name: Orderer
+
+PeerOrgs:
+
+  - Name: Org1
+
+  - Name: Org2
+
+  - Name: Org3

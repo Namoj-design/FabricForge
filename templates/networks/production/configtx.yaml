@@ -1,0 +1,5 @@
+Capabilities:
+
+  Channel: &ChannelCapabilities
+
+    V3_0: true

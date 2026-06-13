@@ -1,0 +1,7 @@
+version: "3"
+
+services:
+
+  fabric-ca:
+
+    image: hyperledger/fabric-ca

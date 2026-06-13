@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+
+  orderer0:
+
+    image: hyperledger/fabric-orderer
+
+  peer0-org1:
+
+    image: hyperledger/fabric-peer
+
+  peer0-org2:
+
+    image: hyperledger/fabric-peer
+
+  peer0-org3:
+
+    image: hyperledger/fabric-peer
