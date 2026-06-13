@@ -1,0 +1,22 @@
+{
+    "title": "Resource Utilization",
+    "uid": "resource-utilization",
+    "panels": [
+        {
+            "title": "CPU Usage",
+            "type": "timeseries"
+        },
+        {
+            "title": "Memory Usage",
+            "type": "timeseries"
+        },
+        {
+            "title": "Network Usage",
+            "type": "timeseries"
+        },
+        {
+            "title": "Disk Usage",
+            "type": "timeseries"
+        }
+    ]
+}

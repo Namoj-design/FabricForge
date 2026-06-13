@@ -1,0 +1,18 @@
+{
+    "title": "Transaction Performance",
+    "uid": "transaction-performance",
+    "panels": [
+        {
+            "title": "TPS",
+            "type": "timeseries"
+        },
+        {
+            "title": "Latency",
+            "type": "timeseries"
+        },
+        {
+            "title": "Success Rate",
+            "type": "stat"
+        }
+    ]
+}

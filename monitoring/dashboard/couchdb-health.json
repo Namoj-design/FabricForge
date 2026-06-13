@@ -1,0 +1,18 @@
+{
+    "title": "CouchDB Health",
+    "uid": "couchdb-health",
+    "panels": [
+        {
+            "title": "Database Status",
+            "type": "stat"
+        },
+        {
+            "title": "Read Operations",
+            "type": "timeseries"
+        },
+        {
+            "title": "Write Operations",
+            "type": "timeseries"
+        }
+    ]
+}

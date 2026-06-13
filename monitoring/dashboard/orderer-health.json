@@ -1,0 +1,14 @@
+{
+    "title": "Orderer Health",
+    "uid": "orderer-health",
+    "panels": [
+        {
+            "title": "Orderer Status",
+            "type": "table"
+        },
+        {
+            "title": "Block Processing Rate",
+            "type": "timeseries"
+        }
+    ]
+}

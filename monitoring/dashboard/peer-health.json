@@ -1,0 +1,18 @@
+{
+    "title": "Peer Health",
+    "uid": "peer-health",
+    "panels": [
+        {
+            "title": "Peer Status",
+            "type": "table"
+        },
+        {
+            "title": "Peer CPU Usage",
+            "type": "timeseries"
+        },
+        {
+            "title": "Peer Memory Usage",
+            "type": "timeseries"
+        }
+    ]
+}

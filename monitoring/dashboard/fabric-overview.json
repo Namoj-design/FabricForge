@@ -1,0 +1,23 @@
+{
+    "title": "Fabric Overview",
+    "uid": "fabric-overview",
+    "timezone": "browser",
+    "panels": [
+        {
+            "title": "Active Peers",
+            "type": "stat"
+        },
+        {
+            "title": "Active Orderers",
+            "type": "stat"
+        },
+        {
+            "title": "Channels",
+            "type": "stat"
+        },
+        {
+            "title": "Chaincodes",
+            "type": "stat"
+        }
+    ]
+}
