@@ -2,18 +2,23 @@
 
 validate_reports() {
 
-REPORT_DIR="generated/reports"
+echo
+echo "================================="
+echo "Report Validation"
+echo "================================="
+echo
 
-if [ ! -d "$REPORT_DIR" ]; then
+if [ ! -d generated/reports ]; then
 
-    echo "No reports found"
+    echo "No Reports Generated"
 
     return 1
 
 fi
 
-echo "Available Reports"
+ls -lah generated/reports
 
-ls -lah "$REPORT_DIR"
+echo
+echo "Validation Complete"
 
 }

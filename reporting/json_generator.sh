@@ -2,14 +2,15 @@
 
 generate_json_report() {
 
-mkdir -p generated/reports
+OUTPUT="generated/reports/report.json"
 
-cat > generated/reports/report.json <<EOF
+cat > "$OUTPUT" <<EOF
 {
-    "timestamp":"$(date)",
+    "generated":"$(date)",
     "docker":"$(docker --version 2>/dev/null)",
     "go":"$(go version 2>/dev/null)",
-    "node":"$(node -v 2>/dev/null)"
+    "node":"$(node -v 2>/dev/null)",
+    "python":"$(python3 --version 2>/dev/null)"
 }
 EOF
 
