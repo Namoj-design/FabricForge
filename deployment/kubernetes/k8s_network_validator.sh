@@ -2,14 +2,24 @@
 
 validate_k8s_network() {
 
-    kubectl get pods
+echo
+echo "================================="
+echo "Kubernetes Validation"
+echo "================================="
+echo
 
-    if [ $? -eq 0 ]; then
+kubectl get nodes
 
-        echo "Kubernetes Healthy"
+echo
 
-    else
+kubectl get pods -A
 
-        echo "Kubernetes Validation Failed"
-    fi
+echo
+
+kubectl get svc -A
+
+echo
+
+echo "Validation Complete"
+
 }

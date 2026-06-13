@@ -2,10 +2,15 @@
 
 generate_ca() {
 
-cat > generated-k8s/ca.yaml <<EOF
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: fabric-ca
-EOF
+OUTPUT="generated/kubernetes"
+
+mkdir -p "$OUTPUT"
+
+cp \
+templates/kubernetes/ca.yaml \
+"$OUTPUT/"
+
+echo
+echo "Fabric CA Deployment Generated"
+
 }

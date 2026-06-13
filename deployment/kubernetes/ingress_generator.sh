@@ -1,16 +1,16 @@
 #!/bin/bash
 
-generate_peer() {
+generate_ingress() {
 
 OUTPUT="generated/kubernetes"
 
 mkdir -p "$OUTPUT"
 
 cp \
-templates/kubernetes/peer.yaml \
+templates/kubernetes/ingress.yaml \
 "$OUTPUT/"
 
 echo
-echo "Peer Deployment Generated"
+echo "Ingress Generated"
 
 }

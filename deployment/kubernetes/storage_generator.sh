@@ -2,10 +2,15 @@
 
 generate_storage() {
 
-cat > generated-k8s/pvc.yaml <<EOF
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: fabric-pvc
-EOF
+OUTPUT="generated/kubernetes"
+
+mkdir -p "$OUTPUT"
+
+cp \
+templates/kubernetes/pvc.yaml \
+"$OUTPUT/"
+
+echo
+echo "Storage Generated"
+
 }

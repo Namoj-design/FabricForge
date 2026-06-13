@@ -2,15 +2,21 @@
 
 generate_namespace() {
 
-    echo "Namespace Name:"
-    read NS
+read -p "Namespace: " NAMESPACE
 
-    mkdir -p generated-k8s
+OUTPUT="generated/kubernetes"
 
-    cat > generated-k8s/namespace.yaml <<EOF
+mkdir -p "$OUTPUT"
+
+cat > "$OUTPUT/namespace.yaml" <<EOF
 apiVersion: v1
 kind: Namespace
+
 metadata:
-  name: $NS
+  name: $NAMESPACE
 EOF
+
+echo
+echo "Namespace Generated"
+
 }
