@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: orderer0
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: orderer0
+
+  template:
+    metadata:
+      labels:
+        app: orderer0
+
+    spec:
+      containers:
+
+      - name: orderer
+
+        image: hyperledger/fabric-orderer:latest
+
+        ports:
+        - containerPort: 7050

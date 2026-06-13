@@ -1,0 +1,29 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+
+metadata:
+  name: fabric-ingress
+
+spec:
+
+  rules:
+
+  - host: fabric.local
+
+    http:
+
+      paths:
+
+      - path: /
+
+        pathType: Prefix
+
+        backend:
+
+          service:
+
+            name: fabric-service
+
+            port:
+
+              number: 7051

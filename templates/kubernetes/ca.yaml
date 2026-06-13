@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: fabric-ca
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: fabric-ca
+
+  template:
+    metadata:
+      labels:
+        app: fabric-ca
+
+    spec:
+      containers:
+
+      - name: ca
+
+        image: hyperledger/fabric-ca:latest
+
+        ports:
+        - containerPort: 7054
